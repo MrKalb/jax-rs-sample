@@ -4,6 +4,10 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
 /**
  * Root resource (exposed at "myresource" path)
  */
@@ -22,11 +26,31 @@ public class MyResource {
         return "Got it!";
     }
 
-    @POST
+    @GET()
+    @Path("/test")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response post(Object object) {
-        return Response.status(Response.Status.fromStatusCode(200)).entity(object).build();
+    public Response post() {
+
+        EntityManager entityManager =
+                Persistence.createEntityManagerFactory("jax-rs-sample").createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            PersonEntity personEntity = new PersonEntity();
+            personEntity.setId(1L);
+            personEntity.setName("Igor");
+            entityManager.persist(personEntity);
+            transaction.commit();
+
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            entityManager.clear();
+            entityManager.close();
+        }
+
+        return Response.status(Response.Status.fromStatusCode(200)).build();
     }
 
     @DELETE
