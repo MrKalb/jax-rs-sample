@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="org.example.MyResourceTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="org.example.MyResourceTest" time="0.001" errors="0" skipped="0">
   <properties>
-    <property name="idea.version" value="2022.3.2"/>
+    <property name="idea.version" value="2021.1.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.11+9"/>
     <property name="sun.boot.library.path" value="/Users/igorkalb/Library/Java/JavaVirtualMachines/adopt-openjdk-11.0.11/Contents/Home/lib"/>
@@ -26,12 +26,11 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="maven.ext.class.path" value="/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven-event-listener.jar"/>
-    <property name="classworlds.conf" value="/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="maven.ext.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/igorkalb/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="jansi.passthrough" value="true"/>
-    <property name="maven.conf" value="/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf"/>
+    <property name="maven.conf" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -44,10 +43,10 @@
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="11"/>
     <property name="user.name" value="igorkalb"/>
-    <property name="java.class.path" value="/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.3.2 install"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.1.3 install"/>
     <property name="java.home" value="/Users/igorkalb/Library/Java/JavaVirtualMachines/adopt-openjdk-11.0.11/Contents/Home"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -55,7 +54,7 @@
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="11.0.11"/>
     <property name="java.vendor" value="AdoptOpenJDK"/>
-    <property name="maven.home" value="/Users/igorkalb/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/223.8617.56/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="maven.home" value="/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2021-04-20"/>
     <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
@@ -66,7 +65,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.example.MyResourceTest" name="org.example.MyResourceTest.testGetIt" time="0.002">
+  <testcase classname="org.example.MyResourceTest" name="org.example.MyResourceTest.testGetIt" time="0.001">
     <failure type="java.lang.NullPointerException">java.lang.NullPointerException
 	at org.example.MyResourceTest.testGetIt(MyResourceTest.java:45)
 </failure>

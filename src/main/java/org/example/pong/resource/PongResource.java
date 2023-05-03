@@ -5,9 +5,12 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.example.pong.request.PongRequest;
 import org.example.pong.response.PongResponse;
+import org.example.pong.service.PongService;
 
 @Path("/v1/resource")
 public class PongResource {
+
+    private PongService pongService = new PongService();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -20,13 +23,27 @@ public class PongResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response post(PongRequest pongRequest) {
-        PongResponse pongResponse = new PongResponse();
-        pongResponse.setMessage(new StringBuilder()
-                .append("Receive: ")
-                .append(pongRequest.getMessage())
-                .toString());
+        String pongResponse = pongService.returnPong(pongRequest.getMessage());
         return Response.ok(pongResponse).build();
     }
+
+    @POST
+    @Path("/ping/message")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response postMessage(PongRequest pongRequest) {
+        pongService.postMessage(pongRequest);
+        return Response.ok().build();
+    }
+
+    @GET
+    @Path("/ping/message")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getMessage() {
+        return Response.ok(pongService.getMessage()).build();
+    }
+
 
     @GET
     @Path("/ping")
